@@ -4,6 +4,14 @@
 	LAZYINSERT(listed_products, list(list("XM51 Breaching Shotgun", (1), /obj/item/storage/box/guncase/xm51, VENDOR_ITEM_REGULAR)), 15)
 	LAZYINSERT(listed_products, list(list("NSG23 Assault Rifle", (1), /obj/item/storage/box/guncase/nsg23_marine, VENDOR_ITEM_REGULAR)), 16)
 
+/obj/structure/machinery/cm_vending/sorted/attachments/populate_product_list(scale)
+	. = ..()
+	LAZYINSERT(listed_products, list(list("Barrel Charger", 2.5, /obj/item/attachable/heavy_barrel, VENDOR_ITEM_REGULAR)), 2)
+
+/obj/structure/machinery/cm_vending/sorted/attachments/squad/populate_product_list(scale)
+	. = ..()
+	LAZYINSERT(listed_products, list(list("Barrel Charger", 0.9, /obj/item/attachable/heavy_barrel, VENDOR_ITEM_REGULAR)), 2)
+
 /datum/gear/weapon/rmr6
 	display_name = "RMR-6 revolver"
 	path = /obj/item/storage/box/fluff_gun/rmr6
@@ -82,3 +90,14 @@
 	new /obj/item/ammo_magazine/pistol/mod88/normalpoint/extended(src)
 	new /obj/item/ammo_magazine/pistol/mod88/normalpoint/extended(src)
 	new /obj/item/ammo_magazine/pistol/mod88/normalpoint/extended(src)
+
+/datum/supply_packs/muzzle_heavy
+	name = "barrel charger attachment crate (x2)"
+	contains = list(
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/heavy_barrel,
+	)
+	cost = 30
+	containertype = /obj/structure/closet/crate
+	containername = "heavy barrel attachment crate"
+	group = "Attachments"
