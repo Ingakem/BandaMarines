@@ -453,21 +453,21 @@
 
 //Xm51 lethal
 /obj/item/ammo_magazine/rifle/xm51/lethal
-	name = "\improper XM51 magazine (12g)"
+	name = "\improper XM50 magazine (12g)"
 	desc = "A 12 gauge shotgun magazine."
 	caliber = "12g"
 	w_class = SIZE_MEDIUM
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot
-	max_rounds = 12
+	max_rounds = 10
 	gun_type = /obj/item/weapon/gun/rifle/xm51
 	transfer_handful_amount = 5
 
 /obj/item/ammo_magazine/rifle/xm51/lethal/slug
-	name = "\improper XM51 magazine (12g slug)"
+	name = "\improper XM50 magazine (12g slug)"
 	desc = "A 12 gauge shotgun magazine."
 	caliber = "12g"
 	w_class = SIZE_MEDIUM
 	default_ammo = /datum/ammo/bullet/shotgun/slug
-	max_rounds = 12
+	max_rounds = 10
 	gun_type = /obj/item/weapon/gun/rifle/xm51
 	transfer_handful_amount = 5
